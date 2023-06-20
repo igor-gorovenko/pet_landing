@@ -7,19 +7,16 @@
 {% block content %}
 
 <!--Main Section-->
-<section class="bg-gradient pt-5 pb-6">
+<section>
     <div class="container">
-        <div class="row mt-6">
-            <div class="col-md-8 mx-auto text-center">
-                <h1>MacBook Air</h1>
-                <p class="lead mb-5"></p>
-                <a href="#" class="btn btn-success">
+        <div class="text-center">
+            <h1>MacBook Air</h1>
+            <div>
+                <a href="{% url 'form' %}" class="btn btn-success">
                     Order
                 </a>
             </div>
-        </div>
-        <div class="text-center">
-            <img src="{% static 'img/air4.png' %}" class="rounded" alt="mac air">
+            <img src="{% static 'img/air4.png' %}" class="img-fluid" alt="mac air">
         </div>
     </div>
 </section>
