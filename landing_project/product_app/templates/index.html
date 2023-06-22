@@ -16,7 +16,12 @@
                     Order
                 </a>
             </div>
+
+            {% if img %} <!-- TODO: добавить изображение из формы -->
             <img src="{% static 'img/air4.png' %}" class="img-fluid" alt="mac air">
+            {% else %}
+            <img src="{% static 'img/no_img.jpg' %}" class="img-fluid">
+            {% endif %}
         </div>
     </div>
 </section>

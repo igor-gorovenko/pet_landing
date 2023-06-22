@@ -14,3 +14,11 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return self.title
+    
+
+class Advantages(models.Model):
+    title = models.CharField(max_length=120)
+    description = models.TextField()
+
+    def __str__(self) -> str:
+        return f'{self.title}'
