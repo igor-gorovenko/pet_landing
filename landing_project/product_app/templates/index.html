@@ -7,21 +7,19 @@
 {% block content %}
 
 <!--Main Section-->
+
+{% for product in list_products %}
 <section>
     <div class="container">
         <div class="text-center">
-            <h1>MacBook Air</h1>
+            <h1>{{ product.title }}</h1>
+            <p>{{ product.description }}</p>
             <div>
                 <a href="{% url 'form' %}" class="btn btn-success">
                     Order
                 </a>
             </div>
-
-            {% if img %} <!-- TODO: добавить изображение из формы -->
-            <img src="{% static 'img/air4.png' %}" class="img-fluid" alt="mac air">
-            {% else %}
-            <img src="{% static 'img/no_img.jpg' %}" class="img-fluid">
-            {% endif %}
+            <img src="{% static 'img/air4.png' %}" class="img-fluid">
         </div>
     </div>
 </section>
@@ -33,52 +31,21 @@
             <div class="col-md-8 mx-auto">
                 <h2 class="text-center text-md-left">Quick Look</h2>
                 <div class="row feature-grid">
+                    {% for advantage in list_advantages %}
                     <div class="col-sm-6">
                         <div class="media">
                             <div class="media-body">
-                                Liquid Retina display 13.6
+                                <h3>{{ advantage.title }}</h3>
+                                <p>{{ advantage.description }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="media">
-                            <div class="media-body">
-                                Apple M2 chip
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="media">
-                            <div class="media-body">
-                                8-core CPU
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="media">
-                            <div class="media-body">
-                                Up to 18 hrs battery life
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="media">
-                            <div class="media-body">
-                                Up to 24 GB unified memory
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="media">
-                            <div class="media-body">
-                                Up to 2 TB storage
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </section>
+{% endfor %}
 
 {% endblock content %}
