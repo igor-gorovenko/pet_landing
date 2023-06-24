@@ -6,9 +6,11 @@
     {% csrf_token %}
     <h2>Login</h2>
     {{ form.as_p }}
+    <p> <a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
     <input type="submit" value="Login" />
 
-    <p>Don't have an account? <a href="{%url 'register' %}">Register</a></p>
+
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
 
 </form>
 
