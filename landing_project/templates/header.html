@@ -10,9 +10,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {%if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <p class="nav-link">
-                        Hi {{ request.user.username | title }}
-                    </p>
+                    <a class="nav-link" href="#">{{ request.user.username | title }}</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
                 {%else%}
