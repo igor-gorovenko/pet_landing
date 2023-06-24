@@ -1,5 +1,4 @@
-from django.shortcuts import render, HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 from .models import Product, Advantage
 
@@ -12,11 +11,6 @@ def index(request):
         'list_advantages': list_advantages,
     }
     return render(request, 'index.html', context)
-
-
-def form(request):
-    template = loader.get_template('form.html')
-    return HttpResponse(template.render())
 
 
 
