@@ -11,17 +11,21 @@
 {% for product in list_products %}
 <section>
     <div class="container p-3">
-        <div class="text-center">
-            <h1>{{ product.title }}</h1>
-            <h3>$ {{ product.price }}</h3>
-            <p>{{ product.description }}</p>
+        <div class="row">
+            <div class="col-md-8 mx-auto ">
+                <div class="text-center">
+                    <h1>{{ product.title }}</h1>
+                    <h3>$ {{ product.price }}</h3>
+                    <p>{{ product.description }}</p>
 
-            <div>
-                <a href="{% url 'create_order' product.id %}" class="btn btn-success">
-                    Order
-                </a>
+                    <div>
+                        <a href="{% url 'create_order' product.id %}" class="btn btn-success">
+                            Order
+                        </a>
+                    </div>
+                    <img src="{% static 'img/air4.png' %}" class="img-fluid">
+                </div>
             </div>
-            <img src="{% static 'img/air4.png' %}" class="img-fluid">
         </div>
     </div>
 </section>
