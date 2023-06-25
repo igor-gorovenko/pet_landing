@@ -5,8 +5,8 @@ from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=65)
-    password = forms.CharField(max_length=65, widget=forms.PasswordInput)
+    username = forms.CharField(max_length=40)
+    password = forms.CharField(max_length=40, widget=forms.PasswordInput)
 
 
 class RegisterForm(UserCreationForm):

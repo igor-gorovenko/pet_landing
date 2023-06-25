@@ -1,8 +1,6 @@
 from django import forms
-from django.contrib.auth.models import User
 
 
-class ProductCreateForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'email']
+class CreateOrderForm(forms.Form):
+    username = forms.CharField(max_length=40)
+    email = forms.EmailField(max_length=40)
