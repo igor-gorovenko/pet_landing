@@ -40,6 +40,11 @@ cd landing_project
 python manage.py migrate
 ```
 
+Генерируем данные
+```
+python manage.py seed landing_project --number=5
+```
+
 Что бы запустить сервер, для этого нужно перейти в папку с файлом manage.py и ввести команду:
 ```
 python manage.py runserver
