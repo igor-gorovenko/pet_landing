@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 import environ
+import django_seed
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     # local
     "product_app.apps.ProductAppConfig",
     "users.apps.UsersConfig",
+    "django_seed",
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
