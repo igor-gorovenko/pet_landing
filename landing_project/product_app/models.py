@@ -13,6 +13,7 @@ class Product(models.Model):
     title = models.CharField(max_length=40)
     description = models.TextField()
     price = models.IntegerField()
+    img = models.ImageField(upload_to='images')
     advantages = models.ManyToManyField(Advantage)
     
     def __str__(self) -> str:
