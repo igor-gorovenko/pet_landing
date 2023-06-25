@@ -1,6 +1,6 @@
 # pet_landing
 
-<img src="#">
+<img width="1024" alt="Screenshot 2023-06-25 at 15 27 21" src="https://github.com/igor-gorovenko/pet_landing/assets/59226858/aabd5d98-b510-4e0d-87f5-74b9e4bc1090">
 
 Превью проекта
 
