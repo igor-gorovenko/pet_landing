@@ -17,7 +17,7 @@
             <p>{{ product.description }}</p>
 
             <div>
-                <a href="{% url 'form' %}" class="btn btn-success">
+                <a href="{% url 'create_order' product.id %}" class="btn btn-success">
                     Order
                 </a>
             </div>

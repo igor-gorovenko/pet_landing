@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Form{% endblock title %}
+
+{% block content %}
+<div class="conteiner">
+    <div class="row">
+        <!-- Order form -->
+        <div class="col-8">
+            {% if request.user.is_authenticated %}
+            <form class="p-3">
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            {% else %}
+            <form class="p-3">
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            {% endif %}
+        </div>
+        <!-- Product detail -->
+        <div class="col-4">
+            <div class="bg-light p-3">
+                <h5>Product detail:</h5>
+                <p>product: {{ product.title }}</p>
+                <p>price: {{ product.price }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+{% endblock content %}

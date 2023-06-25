@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Product, Advantage
+from .forms import ProductCreateForm
 
 
 def index(request):
@@ -13,12 +14,12 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def form(request):
-    product = Product.objects.all()
+def create_order(request, id):
+    product = get_object_or_404(Product, pk=id)
     context = {
         'product': product
         }
-    return render(request, 'form.html', context)
+    return render(request, 'create_order.html', context)
 
 
 
