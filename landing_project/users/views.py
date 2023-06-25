@@ -32,7 +32,6 @@ def sign_in(request):
         if request.user.is_authenticated:
             return redirect('index')
         
-
         form = LoginForm()
         return render(request,'users/login.html', {'form': form})
     
