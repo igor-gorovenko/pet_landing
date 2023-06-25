@@ -13,6 +13,13 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+def form(request):
+    product = Product.objects.all()
+    context = {
+        'product': product
+        }
+    return render(request, 'form.html', context)
+
 
 
     
