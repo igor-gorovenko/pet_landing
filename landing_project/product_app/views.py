@@ -8,7 +8,7 @@ def index(request):
     context = {
         'list_products': list_products,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'landing/index.html', context)
 
 
 def product(request, id_product):
@@ -18,7 +18,7 @@ def product(request, id_product):
         'product': product,
         'list_advantages': list_advantages,
     }
-    return render(request, 'detail.html', context)
+    return render(request, 'landing/detail.html', context)
 
 
 def create_order(request, id):
@@ -27,7 +27,7 @@ def create_order(request, id):
     context = {
         'product': product
         }
-    return render(request, 'create_order.html', context)
+    return render(request, 'landing/create_order.html', context)
 
 
 
