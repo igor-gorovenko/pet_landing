@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Main page{% endblock title %}
+
+{% block content %}
+
+<!--Main Section-->
+<section>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-md-8 mx-auto ">
+                <div class="text-center">
+                    <h1>{{ product.title }}</h1>
+                    <h3>$ {{ product.price }}</h3>
+                    <p>{{ product.description }}</p>
+                    <div>
+                        <a href="{% url 'create_order' product.id %}" class="btn btn-success">
+                            Order
+                        </a>
+                    </div>
+                    <img src="{{ product.img.url }}" class="img-fluid" width="640">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Features Section-->
+<section class="py-6">
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-md-8 mx-auto ">
+                <h2 class="text-center text-md-left">Advantages</h2>
+                <div class="row feature-grid">
+
+                    {% for adv in list_advantages %}
+                    <div class="col-sm-6">
+                        <div class="media p-1">
+                            <div class="media-body">
+                                <h3>{{ adv.title }}</h3>
+                                <p>{{ adv.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
