@@ -30,6 +30,10 @@ def create_order(request, id):
     return render(request, 'landing/create_order.html', context)
 
 
-
-    
+def order_complete(request, id_product):
+    product = get_object_or_404(Product, id=id_product)
+    context = {
+        'product': product,
+    }
+    return render(request, 'landing/order_complete.html', context)
     

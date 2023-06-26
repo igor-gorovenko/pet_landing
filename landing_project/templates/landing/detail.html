@@ -7,7 +7,7 @@
 {% block content %}
 
 <!--Main Section-->
-<section>
+<div>
     <div class="container p-3">
         <div class="row">
             <div class="col-md-8 mx-auto ">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!--Features Section-->
 <section class="py-6">
@@ -39,8 +39,8 @@
                     <div class="col-sm-6">
                         <div class="media p-1">
                             <div class="media-body">
-                                <h3>{{ adv }}</h3>
-                                <p>{{ adv }}</p>
+                                <h3>{{ adv.title }}</h3>
+                                <p>{{ adv.description }}</p>
                             </div>
                         </div>
                     </div>
