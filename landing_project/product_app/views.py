@@ -13,7 +13,7 @@ def index(request):
 
 def product(request, id_product):
     product = get_object_or_404(Product, id=id_product)
-    list_advantages = Advantage.objects.filter()
+    list_advantages = Product.objects.get(id=id_product).advantages.all()
     context = {
         'product': product,
         'list_advantages': list_advantages,
