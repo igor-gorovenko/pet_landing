@@ -1,6 +1,7 @@
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 
-from .models import Product, Advantage
+from .models import Product, Order
 
 
 def index(request):
@@ -11,9 +12,9 @@ def index(request):
     return render(request, 'landing/index.html', context)
 
 
-def product(request, id_product):
-    product = get_object_or_404(Product, id=id_product)
-    list_advantages = Product.objects.get(id=id_product).advantages.all()
+def product(request, id):
+    product = get_object_or_404(Product, id=id)
+    list_advantages = Product.objects.get(id=id).advantages.all()
     context = {
         'product': product,
         'list_advantages': list_advantages,
@@ -22,16 +23,24 @@ def product(request, id_product):
 
 
 def create_order(request, id):
-
-    product = get_object_or_404(Product, pk=id)
-    context = {
-        'product': product
+    order = Order()
+    
+    if request.method == 'POST':
+        order.customer = request.POST.get('customer')
+        order.product = Product.objects.get(id=id)
+        order.save()
+        return HttpResponseRedirect('/')
+    else:
+        product = Product.objects.get(id=id)
+        context = {
+            'order': order,
+            'product': product,
         }
-    return render(request, 'landing/create_order.html', context)
+        return render(request, 'landing/create_order.html', context)
 
 
-def order_complete(request, id_product):
-    product = get_object_or_404(Product, id=id_product)
+def order_complete(request, id):
+    product = get_object_or_404(Product, id=id)
     context = {
         'product': product,
     }
