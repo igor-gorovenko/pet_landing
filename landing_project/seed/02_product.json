@@ -1,0 +1,59 @@
+[
+    {
+        "model": "product_app.product",
+        "pk": 1,
+        "fields": {
+            "title": "Macbook Air 13",
+            "description": "MacBook Air with M1 is an incredibly portable laptop — it’s nimble and quick, with a silent, fanless design and a beautiful Retina display. Thanks to its slim profile and all‑day battery life, this Air moves at the speed of lightness.",
+            "price": 1099,
+            "img": "images/mac1.jpg",
+            "advantages": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "product_app.product",
+        "pk": 2,
+        "fields": {
+            "title": "Macbook Air 15",
+            "description": "Impressively big. Impossibly thin. The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display. And with the 13‑inch model, you have more reasons than ever to choose Air. Supercharged by the M2 chip — and with up to 18 hours of battery life1 — both laptops deliver blazing-fast performance in an ultraportable design.",
+            "price": 1299,
+            "img": "images/mac2.jpg",
+            "advantages": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "product_app.product",
+        "pk": 3,
+        "fields": {
+            "title": "Macbook Pro 14",
+            "description": "Impressively big. Impossibly thin. The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display. And with the 13‑inch model, you have more reasons than ever to choose Air. Supercharged by the M2 chip — and with up to 18 hours of battery life1 — both laptops deliver blazing-fast performance in an ultraportable design.",
+            "price": 2299,
+            "img": "images/mac3.jpg",
+            "advantages": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "product_app.product",
+        "pk": 4,
+        "fields": {
+            "title": "Macbook Pro 16",
+            "description": "Impressively big. Impossibly thin. The new 15‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display. And with the 13‑inch model, you have more reasons than ever to choose Air. Supercharged by the M2 chip — and with up to 18 hours of battery life1 — both laptops deliver blazing-fast performance in an ultraportable design.",
+            "price": 2499,
+            "img": "images/mac4.jpg",
+            "advantages": [
+                2,
+                4
+            ]
+        }
+    }
+]

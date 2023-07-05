@@ -1,0 +1,34 @@
+[
+    {
+        "model": "product_app.advantage",
+        "pk": 1,
+        "fields": {
+            "title": "13.6",
+            "description": "Liquid Retina display"
+        }
+    },
+    {
+        "model": "product_app.advantage",
+        "pk": 2,
+        "fields": {
+            "title": "8-core",
+            "description": "CPU"
+        }
+    },
+    {
+        "model": "product_app.advantage",
+        "pk": 4,
+        "fields": {
+            "title": "Two perfect sizes",
+            "description": "Whether you pick the 13- or 15‑inch laptop, both models are superlight and measure just under half an inch thin, so you can take yours anywhere."
+        }
+    },
+    {
+        "model": "product_app.advantage",
+        "pk": 3,
+        "fields": {
+            "title": "Four stellar colors",
+            "description": "Your options are out of this world — and each one comes with a matching MagSafe charging cable."
+        }
+    }
+]

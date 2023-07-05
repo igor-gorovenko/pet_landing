@@ -35,8 +35,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # local
-    "product_app.apps.ProductAppConfig",
-    "users.apps.UsersConfig",
+    "product_app",
+    "users",
     "django_seed",
 ]
 
