@@ -29,7 +29,7 @@ def create_order(request, id):
         order.customer = request.POST.get('customer')
         order.product = Product.objects.get(id=id)
         order.save()
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect(f'/order_complete/{id}')
     else:
         product = Product.objects.get(id=id)
         context = {

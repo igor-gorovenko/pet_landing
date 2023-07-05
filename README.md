@@ -40,10 +40,17 @@ cd landing_project
 python manage.py migrate
 ```
 
-Генерируем данные
+> Теперь нужно сгенерировать данные, для этого мы используем python manage.py loaddata <path_file>
+
+Сгенерируем преимущества товаров
 ```
-python manage.py seed product_app --number=5
+python manage.py loaddata seed/01_advantage.json
 ```
+Сгенерируем товары
+```
+python manage.py loaddata seed/02_product.json
+```
+> Теперь у нас все готово что бы проверить наш проект
 
 Что бы запустить сервер, для этого нужно перейти в папку с файлом manage.py и ввести команду:
 ```
